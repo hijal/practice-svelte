@@ -1,6 +1,16 @@
-<script></script>
+<script>
+  let textarea = '';
+</script>
 
-<div>Textarea</div>
+<div>Textarea binding</div>
+
+<label>
+  <textarea bind:value={textarea}></textarea>
+</label>
+
+<p>
+  Entered textarea value: {textarea}
+</p>
 
 <style>
 </style>

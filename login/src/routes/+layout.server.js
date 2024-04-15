@@ -2,6 +2,6 @@
 
 export const load = ({ locals }) => {
 	return {
-		isLoggedIn: true || false
+		isLoggedIn: locals.isLoggedIn
 	};
 };

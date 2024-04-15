@@ -12,7 +12,4 @@
 	});
 </script>
 
-{#if $isLoggedIn}
-	<slot />
-{/if}
-
+<slot />

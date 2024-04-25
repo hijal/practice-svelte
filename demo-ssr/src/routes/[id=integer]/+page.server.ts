@@ -1,7 +1,5 @@
 import { error, type ServerLoadEvent } from '@sveltejs/kit';
 
-import { PUBLIC_BOBS_BURGERS_API_URL } from '$env/static/public';
-
 type Character = {
 	id: number;
 	name: string;
@@ -17,9 +15,7 @@ type Character = {
 export const load = async (event: ServerLoadEvent) => {
 	const { fetch, params } = event;
 
-	const response = await fetch(`${PUBLIC_BOBS_BURGERS_API_URL}/characters/${params.id}`);
-
-	console.log('Fetching character: ', params.id);
+	const response = await fetch(`/api/characters/${params.id}`);
 
 	if (!response.ok) {
 		const err = await response.json();
